@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vincel Landing
 
-## Getting Started
+Landing page pública do [Vincel Studio](https://github.com/rennan313/Vincel-FrontEnd) — plataforma para escritórios de arquitetura.
 
-First, run the development server:
+Next.js (App Router) + TypeScript + Tailwind CSS 4, reaproveitando os tokens de design (cores, tipografia) do app principal (`vincel-front`).
+
+## Rodando localmente
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuração
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copie `.env.example` para `.env.local` e ajuste `NEXT_PUBLIC_APP_URL` para a URL do app (`vincel-front`) em cada ambiente — é para lá que os botões de "Criar conta grátis" e "Entrar" apontam.
 
-## Learn More
+## Stack
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 16 (App Router, Turbopack)
+- Tailwind CSS 4
+- Inter, Space Grotesk e JetBrains Mono ([Fontsource](https://fontsource.org/))
+- [lucide-react](https://lucide.dev/) para ícones
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app` — layout raiz e a página (`page.tsx`)
+- `src/components` — seções da landing (Header, Hero, Features, ProductPreview, Pricing, FinalCta, Footer) e o desenho técnico (`BlueprintDrawing`)
 
-## Deploy on Vercel
+## Notas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- O selo "340+ escritórios de arquitetura no Brasil" no Hero replica o texto mock já usado na tela de login do app — troque por um número real antes de publicar.
+- Os planos e preços em `Pricing.tsx` refletem o seed atual do backend (`prisma/seed.ts`: Solo R$149,90, Escritório R$349,90, Studio R$699,90); mantenha os dois em sincronia se os preços mudarem.

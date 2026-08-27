@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!--
+    Vincel Studio — Scalable SVG Favicon
+    ─────────────────────────────────────────────────────────────
+    Abstracted "V" chevron, matching the official mark's silhouette
+    (public/brand/app-icon-solid-512-transparent.png) at a weight that
+    stays legible at 16px.
+
+    Dark mode support via CSS media query (critical for Safari macOS) —
+    without this the mark is invisible on dark browser tabs.
+
+    Browser support:
+      Chrome 80+  : SVG favicon ✓
+      Firefox 41+ : SVG favicon ✓
+      Safari 12+  : SVG favicon ✓ (requires type="image/svg+xml")
+      IE/Edge pre-Chromium: use favicon.ico fallback
+
+    Usage in Next.js metadata:
+      icons: {
+        icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+      }
+  -->
+  <style>
+    .m { stroke: #2B2B2B; }
+    @media (prefers-color-scheme: dark) { .m { stroke: #FFFFFF; } }
+  </style>
+  <path class="m" d="M3.5 4.5 L11 18.5 L20.5 3.5" fill="none" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
