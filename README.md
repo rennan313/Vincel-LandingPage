@@ -15,7 +15,9 @@ Abra [http://localhost:3000](http://localhost:3000).
 
 ## Configuração
 
-Copie `.env.example` para `.env.local` e ajuste `NEXT_PUBLIC_APP_URL` para a URL do app (`vincel-front`) em cada ambiente — é para lá que os botões de "Criar conta grátis" e "Entrar" apontam.
+Copie `.env.example` para `.env.local` e ajuste `NEXT_PUBLIC_APP_URL` para a URL do app (`vincel-front`) — é para lá que os botões de "Criar conta grátis" e "Entrar" apontam. Em desenvolvimento isso é lido pelo `next dev`/`next build` direto do `.env.local`.
+
+**Importante:** `NEXT_PUBLIC_*` é embutida no bundle em *build time*, não em runtime — no Cloud Run isso significa que `--set-env-vars NEXT_PUBLIC_APP_URL=...` no `gcloud run deploy` **não tem efeito**. A URL de produção (`https://app.vincelstudio.com`) está fixada como default do `ARG NEXT_PUBLIC_APP_URL` no `Dockerfile`; para apontar para outra URL é preciso rebuildar a imagem passando `--build-arg` (ou `--substitutions` no Cloud Build).
 
 ## Stack
 
