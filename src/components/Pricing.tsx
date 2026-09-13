@@ -6,7 +6,7 @@ const PLANS = [
   {
     sheet: "A-109",
     name: "Solo",
-    price: "149,90",
+    price: "99,90",
     description: "Para arquitetos autônomos administrando poucos projetos.",
     features: [
       "Projetos e clientes ilimitados",
@@ -18,7 +18,7 @@ const PLANS = [
   {
     sheet: "A-110",
     name: "Escritório",
-    price: "349,90",
+    price: "159,90",
     description:
       "Para escritórios pequenos e médios com múltiplos projetos ativos.",
     features: [
