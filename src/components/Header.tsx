@@ -5,6 +5,7 @@ import { Logo } from "./Logo";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:5173";
 const LOGIN_URL = APP_URL;
 const REGISTER_URL = `${APP_URL}/register`;
+const CLIENT_PORTAL_URL = `${APP_URL}/portal/login`;
 
 export function Header() {
   return (
@@ -27,6 +28,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <a
+            href={CLIENT_PORTAL_URL}
+            className="hidden text-sm text-text-secondary transition-colors hover:text-text-primary sm:inline"
+          >
+            Área do cliente
+          </a>
+          <span className="hidden h-4 w-px bg-border-card sm:inline" aria-hidden="true" />
           <a
             href={LOGIN_URL}
             className="hidden text-sm text-text-secondary transition-colors hover:text-text-primary sm:inline"
