@@ -5,6 +5,8 @@ import {
   Wallet,
   HardHat,
   UserCog,
+  GanttChartSquare,
+  Timer,
 } from "lucide-react";
 
 const MODULES = [
@@ -50,6 +52,20 @@ const MODULES = [
     description:
       "Perfis de administrador, arquiteto e financeiro — cada pessoa vê só o que precisa para trabalhar.",
   },
+  {
+    sheet: "A-108",
+    icon: GanttChartSquare,
+    title: "Agenda",
+    description:
+      "Linha do tempo em Gantt por projeto e calendário de tarefas, sincronizados com as fases do cronograma.",
+  },
+  {
+    sheet: "A-109",
+    icon: Timer,
+    title: "Controle de horas",
+    description:
+      "Cronômetro na barra lateral para iniciar, pausar e retomar — as horas caem direto na fase certa do projeto.",
+  },
 ];
 
 export function Features() {
@@ -57,13 +73,13 @@ export function Features() {
     <section id="modulos" className="border-t border-border-card">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <p className="font-mono text-xs tracking-[0.18em] text-accent-gold uppercase">
-          Prancha A-102 a A-107 — Módulos do sistema
+          Prancha A-102 a A-109 — Módulos do sistema
         </p>
         <h2 className="mt-4 max-w-xl font-heading text-3xl font-bold text-text-primary sm:text-4xl">
           Cada módulo resolve uma parte real da rotina do escritório.
         </h2>
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-border-card bg-border-card sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-border-card bg-border-card sm:grid-cols-2 lg:grid-cols-4">
           {MODULES.map(({ sheet, icon: Icon, title, description }) => (
             <div key={sheet} className="bg-surface-card p-7">
               <div className="flex items-center justify-between">

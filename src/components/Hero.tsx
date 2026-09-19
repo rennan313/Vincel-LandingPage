@@ -40,12 +40,6 @@ export function Hero() {
               Ver como funciona
             </a>
           </div>
-
-          <p className="mt-8 text-sm text-text-muted">
-            <span className="font-mono text-accent-gold">340+</span>{" "}
-            escritórios de arquitetura no Brasil já organizam a rotina no
-            Vincel Studio.
-          </p>
         </div>
 
         <div className="mx-auto w-full max-w-md md:max-w-none">

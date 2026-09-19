@@ -4,7 +4,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:5173";
 
 const PLANS = [
   {
-    sheet: "A-109",
+    sheet: "A-111",
     name: "Solo",
     price: "99,90",
     description: "Para arquitetos autônomos administrando poucos projetos.",
@@ -16,7 +16,7 @@ const PLANS = [
     highlighted: false,
   },
   {
-    sheet: "A-110",
+    sheet: "A-112",
     name: "Escritório",
     price: "159,90",
     description:
@@ -30,7 +30,7 @@ const PLANS = [
     highlighted: true,
   },
   {
-    sheet: "A-111",
+    sheet: "A-113",
     name: "Studio",
     price: "699,90",
     description:
@@ -50,7 +50,7 @@ export function Pricing() {
     <section id="planos" className="border-t border-border-card">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <p className="font-mono text-xs tracking-[0.18em] text-accent-gold uppercase">
-          Prancha A-109 a A-111 — Planos
+          Prancha A-111 a A-113 — Planos
         </p>
         <h2 className="mt-4 max-w-xl font-heading text-3xl font-bold text-text-primary sm:text-4xl">
           Um plano para cada tamanho de escritório.

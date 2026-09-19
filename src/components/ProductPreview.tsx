@@ -29,7 +29,7 @@ export function ProductPreview() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <p className="font-mono text-xs tracking-[0.18em] text-accent-gold uppercase">
-              Prancha A-108 — Painel
+              Prancha A-110 — Painel
             </p>
             <h2 className="mt-4 font-heading text-3xl font-bold text-text-primary sm:text-4xl">
               Um resumo do escritório, todo dia, sem abrir planilha.
