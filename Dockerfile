@@ -13,6 +13,12 @@ COPY . .
 # via `gcloud run deploy --set-env-vars`.
 ARG NEXT_PUBLIC_APP_URL=https://app.vincelstudio.com
 ENV NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL
+# Mesma regra vale para tracking: sem --build-arg no deploy, a imagem
+# builda sem GA4/Meta Pixel (nenhum script é injetado — ver Analytics.tsx).
+ARG NEXT_PUBLIC_GA4_ID=
+ENV NEXT_PUBLIC_GA4_ID=$NEXT_PUBLIC_GA4_ID
+ARG NEXT_PUBLIC_META_PIXEL_ID=
+ENV NEXT_PUBLIC_META_PIXEL_ID=$NEXT_PUBLIC_META_PIXEL_ID
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN yarn build
 

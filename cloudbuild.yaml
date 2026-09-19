@@ -2,6 +2,11 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args:
       - "build"
+      # GA4/Meta Pixel IDs não são segredo (ficam visíveis no HTML de qualquer
+      # jeito) — por isso vão direto aqui, como já é feito com o APP_URL padrão
+      # no Dockerfile. Ver Analytics.tsx e README.md.
+      - "--build-arg"
+      - "NEXT_PUBLIC_GA4_ID=G-MXNEYY1L3P"
       - "-t"
       - "europe-west1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/vincel-landing:$COMMIT_SHA"
       - "."

@@ -17,7 +17,9 @@ Abra [http://localhost:3000](http://localhost:3000).
 
 Copie `.env.example` para `.env.local` e ajuste `NEXT_PUBLIC_APP_URL` para a URL do app (`vincel-front`) — é para lá que os botões de "Criar conta grátis" e "Entrar" apontam. Em desenvolvimento isso é lido pelo `next dev`/`next build` direto do `.env.local`.
 
-**Importante:** `NEXT_PUBLIC_*` é embutida no bundle em *build time*, não em runtime — no Cloud Run isso significa que `--set-env-vars NEXT_PUBLIC_APP_URL=...` no `gcloud run deploy` **não tem efeito**. A URL de produção (`https://app.vincelstudio.com`) está fixada como default do `ARG NEXT_PUBLIC_APP_URL` no `Dockerfile`; para apontar para outra URL é preciso rebuildar a imagem passando `--build-arg` (ou `--substitutions` no Cloud Build).
+Para tracking, preencha `NEXT_PUBLIC_GA4_ID` (GA4 Measurement ID, `G-XXXXXXXXXX`) e `NEXT_PUBLIC_META_PIXEL_ID` (Meta Pixel ID, só números) no mesmo `.env.local` — ver `src/components/Analytics.tsx`. Sem esses valores nenhum script de tracking é injetado, então dev local funciona normalmente sem eles.
+
+**Importante:** `NEXT_PUBLIC_*` é embutida no bundle em *build time*, não em runtime — no Cloud Run isso significa que `--set-env-vars NEXT_PUBLIC_APP_URL=...` (ou GA4/Pixel) no `gcloud run deploy` **não tem efeito**. A URL de produção (`https://app.vincelstudio.com`) está fixada como default do `ARG NEXT_PUBLIC_APP_URL` no `Dockerfile`; os IDs de tracking não têm default (build de produção sai sem tracking até alguém passar os valores reais). Para apontar para outra URL ou ligar o tracking em produção é preciso rebuildar a imagem passando `--build-arg` (ou `--substitutions` no Cloud Build).
 
 ## Stack
 
