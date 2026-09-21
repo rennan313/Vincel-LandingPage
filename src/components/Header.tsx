@@ -43,7 +43,7 @@ export function Header() {
           </a>
           <a
             href={REGISTER_URL}
-            className="rounded-md bg-accent-gold px-4 py-2 text-sm font-medium text-[#18150e] transition-colors hover:bg-accent-gold-hover"
+            className="rounded-md bg-accent-gold px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-gold-hover"
           >
             Criar conta grátis
           </a>

@@ -35,5 +35,4 @@ Para tracking, preencha `NEXT_PUBLIC_GA4_ID` (GA4 Measurement ID, `G-XXXXXXXXXX`
 
 ## Notas
 
-- O selo "340+ escritórios de arquitetura no Brasil" no Hero replica o texto mock já usado na tela de login do app — troque por um número real antes de publicar.
-- Os planos e preços em `Pricing.tsx` refletem o seed atual do backend (`prisma/seed.ts`: Solo R$149,90, Escritório R$349,90, Studio R$699,90); mantenha os dois em sincronia se os preços mudarem.
+- Vincel é um produto único — `Pricing.tsx` não modela mais planos por porte de escritório (Solo/Escritório/Studio), e sim cadências de cobrança (mensal, trimestral, anual) com desconto crescente sobre o mesmo `MONTHLY_PRICE`. Mantenha `MONTHLY_PRICE`/`QUARTERLY_DISCOUNT`/`YEARLY_DISCOUNT` em sincronia com o preço real cobrado pelo backend (`prisma/seed.ts` / `PlansService`, que é a fonte da verdade quando o escritório efetivamente assina).

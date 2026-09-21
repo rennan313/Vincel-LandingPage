@@ -138,7 +138,7 @@ export function Pricing() {
                 href={`${APP_URL}/register?billing=${plan.key}`}
                 className={`mt-8 inline-flex items-center justify-center rounded-md px-4 py-2.5 text-sm font-medium transition-colors ${
                   plan.highlighted
-                    ? "bg-accent-gold text-[#18150e] hover:bg-accent-gold-hover"
+                    ? "bg-accent-gold text-white hover:bg-accent-gold-hover"
                     : "border border-border-card text-text-primary hover:bg-surface-hover"
                 }`}
               >

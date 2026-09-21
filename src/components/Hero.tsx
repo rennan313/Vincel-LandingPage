@@ -6,7 +6,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:5173";
 export function Hero() {
   return (
     <section id="topo" className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(214,165,102,0.10),_transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(168,114,42,0.10),_transparent_55%)]" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
         <div>
@@ -28,7 +28,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href={`${APP_URL}/register`}
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-gold px-5 py-3 text-sm font-medium text-[#18150e] transition-colors hover:bg-accent-gold-hover"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-gold px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-gold-hover"
             >
               Criar conta grátis
               <ArrowRight size={16} />
@@ -40,6 +40,10 @@ export function Hero() {
               Ver como funciona
             </a>
           </div>
+
+          <p className="mt-4 text-sm text-text-muted">
+            15 dias grátis, sem cartão de crédito.
+          </p>
         </div>
 
         <div className="mx-auto w-full max-w-md md:max-w-none">

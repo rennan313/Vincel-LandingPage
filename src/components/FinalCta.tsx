@@ -15,11 +15,14 @@ export function FinalCta() {
         </p>
         <a
           href={`${APP_URL}/register`}
-          className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-accent-gold px-6 py-3 text-sm font-medium text-[#18150e] transition-colors hover:bg-accent-gold-hover"
+          className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-accent-gold px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-gold-hover"
         >
           Criar conta grátis
           <ArrowRight size={16} />
         </a>
+        <p className="mt-4 text-sm text-text-muted">
+          15 dias grátis, sem cartão de crédito.
+        </p>
       </div>
     </section>
   );
