@@ -1,0 +1,36 @@
+# Vincel Studio
+
+> Plataforma para escritórios de arquitetura: projetos, clientes,
+> financeiro e portal do cliente em um só lugar.
+
+Vincel Studio centraliza a rotina de um escritório de arquitetura —
+substitui a combinação de planilhas soltas, WhatsApp e e-mail que a
+maioria dos escritórios usa hoje.
+
+## Módulos
+
+- Projetos — acompanhamento do estudo preliminar à entrega, com status,
+  tipo, cronograma (Gantt) e materiais especificados por ambiente.
+- Clientes — cadastro de pessoa física ou jurídica com histórico.
+- Portal do cliente — o cliente acompanha o andamento, o briefing e a
+  lista de materiais do seu projeto, e pode solicitar um novo projeto.
+- Financeiro — honorários a receber, despesas a pagar, contas fixas
+  recorrentes e fluxo de caixa projetado.
+- Prestadores — organização de consultores e prestadores por obra
+  (estrutural, elétrico, hidráulico, e mais).
+- Equipe — perfis de administrador, arquiteto e financeiro, cada um
+  vendo só o que precisa pra trabalhar.
+- Agenda — linha do tempo em Gantt por projeto e calendário de tarefas.
+- Controle de horas — cronômetro por projeto/fase.
+
+## Planos
+
+Cobrança mensal, trimestral ou anual (com desconto crescente) do mesmo
+plano — Vincel é um produto único, sem tiers por porte de escritório.
+15 dias grátis, sem cartão de crédito.
+
+## Links
+
+- Site: https://vincelstudio.com
+- Criar conta: https://app.vincelstudio.com/register
+- Portal do cliente: https://app.vincelstudio.com/portal/login
