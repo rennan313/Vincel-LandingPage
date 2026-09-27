@@ -3,23 +3,23 @@ import {
   FolderKanban,
   Users,
   HardHat,
-  UserCog,
-  CreditCard,
+  GanttChartSquare,
+  Wallet,
 } from "lucide-react";
 
 const NAV = [
   { icon: LayoutDashboard, label: "Dashboard", active: true },
-  { icon: FolderKanban, label: "Projetos" },
   { icon: Users, label: "Clientes" },
   { icon: HardHat, label: "Prestadores" },
-  { icon: UserCog, label: "Usuários" },
-  { icon: CreditCard, label: "Assinatura" },
+  { icon: FolderKanban, label: "Projetos" },
+  { icon: GanttChartSquare, label: "Agenda" },
+  { icon: Wallet, label: "Financeiro" },
 ];
 
 const STATS = [
-  { label: "Projetos ativos", value: "12" },
+  { label: "Projetos em andamento", value: "12" },
   { label: "Clientes ativos", value: "34" },
-  { label: "Faturamento do mês", value: "R$ 48.200" },
+  { label: "Honorários em andamento", value: "R$ 48.200" },
 ];
 
 export function ProductPreview() {
@@ -36,9 +36,10 @@ export function ProductPreview() {
             </h2>
             <p className="mt-4 text-text-secondary">
               Ao entrar, cada pessoa do time vê o que importa para o seu
-              papel: projetos em andamento, clientes ativos e o faturamento
-              do mês — atualizados automaticamente conforme o trabalho
-              acontece.
+              papel: projetos em andamento, clientes ativos, honorários e um
+              raio-x visual do escritório — projetos por status e por tipo,
+              fluxo de caixa e gasto médio por categoria — atualizados
+              automaticamente conforme o trabalho acontece.
             </p>
           </div>
 

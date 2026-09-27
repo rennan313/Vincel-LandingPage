@@ -21,7 +21,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-md text-lg text-text-secondary">
-            Projetos, clientes, propostas, reuniões e financeiro — tudo em um
+            Projetos, clientes, financeiro e portal do cliente — tudo em um
             só lugar, feito para a rotina de um escritório de arquitetura.
           </p>
 

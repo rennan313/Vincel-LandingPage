@@ -1,7 +1,7 @@
 import {
   FolderKanban,
   Users,
-  FileText,
+  Globe,
   Wallet,
   HardHat,
   UserCog,
@@ -26,17 +26,17 @@ const MODULES = [
   },
   {
     sheet: "A-104",
-    icon: FileText,
-    title: "Propostas",
+    icon: Globe,
+    title: "Portal do cliente",
     description:
-      "Monte propostas por serviço — anteprojeto, executivo, interiores — e acompanhe a aprovação do cliente.",
+      "Compartilhe o andamento, o briefing e a lista de materiais com o cliente — e receba pedidos de novo projeto direto pela plataforma.",
   },
   {
     sheet: "A-105",
     icon: Wallet,
     title: "Financeiro",
     description:
-      "Faturamento do mês, assinatura do escritório e cobranças em um painel único, sem planilha paralela.",
+      "Honorários a receber, despesas a pagar, contas fixas e fluxo de caixa projetado — tudo em um painel único, sem planilha paralela.",
   },
   {
     sheet: "A-106",

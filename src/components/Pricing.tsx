@@ -23,7 +23,7 @@ function formatBRL(value: number): string {
 
 const FEATURES = [
   "Projetos e clientes ilimitados",
-  "Propostas e financeiro",
+  "Financeiro completo e portal do cliente",
   "Gestão de prestadores",
   "Perfis por função (admin, arquiteto, financeiro)",
 ];
