@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { BLOG_POSTS } from "@/content/blog";
 import { OG_IMAGE } from "@/lib/metadata";
 
+function formatDate(iso: string): string {
+  // timeZone: "UTC" — sem isso, um viewer num fuso atrás de UTC vê a
+  // data errada (ex.: "2026-09-29" virando "28 de setembro").
+  return new Date(iso).toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric", timeZone: "UTC" });
+}
+
 const SITE_URL = "https://vincelstudio.com";
 const TITLE = "Blog | Vincel Studio";
 const DESCRIPTION = "Conteúdo sobre gestão de escritórios de arquitetura — projetos, financeiro, clientes e equipe.";
 
-// noindex enquanto não existir pelo menos um artigo de verdade — uma
-// listagem vazia não tem conteúdo único que valha a pena indexar. Remova
-// este bloco assim que BLOG_POSTS tiver o primeiro post (ver content/blog.ts).
+// noindex só enquanto BLOG_POSTS estiver vazio (uma listagem sem
+// conteúdo não vale indexar) — com os posts já escritos, isso resolve
+// pra `undefined` (indexável) sozinho, sem precisar tocar aqui de novo.
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
@@ -56,9 +63,10 @@ export default function BlogPage() {
             <ul className="mt-10 space-y-6">
               {BLOG_POSTS.map((post) => (
                 <li key={post.slug} className="rounded-lg border border-border-card bg-surface-card p-6">
-                  <a href={`/blog/${post.slug}`} className="font-heading text-xl font-bold text-text-primary">
-                    {post.title}
-                  </a>
+                  <p className="font-mono text-xs text-text-muted">{formatDate(post.publishedAt)}</p>
+                  <Link href={`/blog/${post.slug}`} className="mt-1 block font-heading text-xl font-bold text-text-primary hover:text-accent-gold">
+                    {post.h1}
+                  </Link>
                   <p className="mt-2 text-text-secondary">{post.description}</p>
                 </li>
               ))}

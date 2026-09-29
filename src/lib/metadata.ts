@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { SolutionPageContent } from "@/content/solutions";
+import type { BlogPost } from "@/content/blog";
 
 const SITE_URL = "https://vincelstudio.com";
 
@@ -37,3 +38,31 @@ export function solutionMetadata(content: SolutionPageContent): Metadata {
 // `openGraph` (todas aqui declaram) precisa apontar pra imagem explicitamente,
 // confirmado testando localmente (og:image sumia em toda rota != "/").
 export const OG_IMAGE = [{ url: "/opengraph-image", width: 1200, height: 630, type: "image/png" }];
+
+/** Metadata pra um post do blog — mesmo padrão de solutionMetadata, com
+ * article:published_time (OpenGraph type "article" só existe pra isso). */
+export function blogPostMetadata(post: BlogPost): Metadata {
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `${SITE_URL}/blog/${post.slug}`,
+      siteName: "Vincel Studio",
+      locale: "pt_BR",
+      type: "article",
+      publishedTime: post.publishedAt,
+      images: OG_IMAGE,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: OG_IMAGE,
+    },
+  };
+}
