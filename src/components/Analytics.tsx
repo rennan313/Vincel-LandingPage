@@ -11,6 +11,7 @@ export function Analytics() {
     <>
       {GA4_ID && (
         <>
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
             strategy="afterInteractive"
@@ -28,6 +29,7 @@ export function Analytics() {
 
       {META_PIXEL_ID && (
         <>
+          <link rel="preconnect" href="https://connect.facebook.net" />
           <Script id="meta-pixel-init" strategy="afterInteractive">
             {`
               !function(f,b,e,v,n,t,s)

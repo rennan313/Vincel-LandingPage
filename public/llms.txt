@@ -29,8 +29,19 @@ Cobrança mensal, trimestral ou anual (com desconto crescente) do mesmo
 plano — Vincel é um produto único, sem tiers por porte de escritório.
 15 dias grátis, sem cartão de crédito.
 
-## Links
+## Páginas
 
 - Site: https://vincelstudio.com
+- Como funciona: https://vincelstudio.com/software-para-arquitetura
+- Gestão de projetos: https://vincelstudio.com/gestao-de-projetos-arquitetura
+- Gestão financeira: https://vincelstudio.com/gestao-financeira-arquitetura
+- CRM para arquitetos: https://vincelstudio.com/crm-para-arquitetos
+- Portal do cliente: https://vincelstudio.com/portal-do-cliente-arquitetura
+- Controle de horas: https://vincelstudio.com/controle-de-horas-arquitetura
+- Gestão de escritório: https://vincelstudio.com/gestao-de-escritorio-de-arquitetura
+- Preços: https://vincelstudio.com/precos
+
+## Links
+
 - Criar conta: https://app.vincelstudio.com/register
-- Portal do cliente: https://app.vincelstudio.com/portal/login
+- Login do portal do cliente: https://app.vincelstudio.com/portal/login

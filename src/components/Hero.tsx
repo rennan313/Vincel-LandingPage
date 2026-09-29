@@ -15,14 +15,18 @@ export function Hero() {
           </p>
 
           <h1 className="mt-5 font-heading text-4xl font-bold text-text-primary sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]">
-            Seu escritório,
+            Software para escritórios
             <br />
-            em uma plataforma.
+            de arquitetura.
           </h1>
 
-          <p className="mt-6 max-w-md text-lg text-text-secondary">
-            Projetos, clientes, financeiro e portal do cliente — tudo em um
-            só lugar, feito para a rotina de um escritório de arquitetura.
+          <p className="mt-4 font-heading text-xl font-medium text-accent-gold sm:text-2xl">
+            Seu escritório, em uma plataforma.
+          </p>
+
+          <p className="mt-4 max-w-md text-lg text-text-secondary">
+            Gerencie projetos, clientes, financeiro e equipe em uma única
+            plataforma feita para escritórios de arquitetura.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
